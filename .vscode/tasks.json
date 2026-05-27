@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Set up project (macOS/Linux)",
+      "type": "shell",
+      "command": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Set up project (Windows)",
+      "type": "shell",
+      "command": "py -m venv .venv && .venv\\Scripts\\python -m pip install --upgrade pip && .venv\\Scripts\\python -m pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests (macOS/Linux)",
+      "type": "shell",
+      "command": ".venv/bin/python -m pytest",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests (Windows)",
+      "type": "shell",
+      "command": ".venv\\Scripts\\python -m pytest",
+      "problemMatcher": []
+    }
+  ]
+}

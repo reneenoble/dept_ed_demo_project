@@ -1,0 +1,38 @@
+{
+  "name": "Flask demo (Python 3)",
+
+  // Pre-built Microsoft image with Python + git + common build tools.
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+
+  // Run once after the container is built. Creates the venv and installs
+  // requirements so students can hit ▶ Run immediately.
+  "postCreateCommand": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt",
+
+  // Extensions and settings to install inside the container.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy"
+      ],
+      "settings": {
+        // Auto-pick the project venv as the interpreter.
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+        // Auto-activate venv in every new terminal.
+        "python.terminal.activateEnvironment": true,
+        // Turn on the Test Explorer for pytest.
+        "python.testing.pytestEnabled": true,
+        "python.testing.unittestEnabled": false
+      }
+    }
+  },
+
+  // Auto-forward the Flask dev port and open the browser preview.
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "Flask app",
+      "onAutoForward": "openPreview"
+    }
+  }
+}

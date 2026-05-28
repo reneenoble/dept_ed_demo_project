@@ -4,25 +4,13 @@
     {
       "label": "Set up project (macOS/Linux)",
       "type": "shell",
-      "command": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt",
+      "command": "python3 -m venv .venv && .venv/bin/python -m pip install --upgrade pip && .venv/bin/python -m pip install -r requirements.txt && echo '' && echo '========================================================' && echo '  Setup complete!' && echo '' && echo '  NEXT STEP: tell VS Code to use the new environment.' && echo '    1. Look at the bottom-right corner of VS Code' && echo '    2. Click the Python version shown there' && echo '    3. Pick the one labelled  .venv  (Recommended)' && echo '' && echo '  Then open a NEW terminal \u2014 it will show (.venv)' && echo '  in the prompt. You are good to go.' && echo '========================================================' ",
       "problemMatcher": []
     },
     {
       "label": "Set up project (Windows)",
       "type": "shell",
-      "command": "py -m venv .venv && .venv\\Scripts\\python -m pip install --upgrade pip && .venv\\Scripts\\python -m pip install -r requirements.txt",
-      "problemMatcher": []
-    },
-    {
-      "label": "Run tests (macOS/Linux)",
-      "type": "shell",
-      "command": ".venv/bin/python -m pytest",
-      "problemMatcher": []
-    },
-    {
-      "label": "Run tests (Windows)",
-      "type": "shell",
-      "command": ".venv\\Scripts\\python -m pytest",
+      "command": "py -m venv .venv && .venv\\Scripts\\python -m pip install --upgrade pip && .venv\\Scripts\\python -m pip install -r requirements.txt && echo. && echo ======================================================== && echo   Setup complete! && echo. && echo   NEXT STEP: tell VS Code to use the new environment. && echo     1. Look at the bottom-right corner of VS Code && echo     2. Click the Python version shown there && echo     3. Pick the one labelled  .venv  (Recommended) && echo. && echo   Then open a NEW terminal -- it will show (.venv) && echo   in the prompt. You are good to go. && echo ========================================================",
       "problemMatcher": []
     }
   ]

@@ -8,13 +8,34 @@
       "program": "${workspaceFolder}/server.py",
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
-      "python": "${workspaceFolder}/.venv/bin/python",
-      "windows": {
-        "python": "${workspaceFolder}\\.venv\\Scripts\\python.exe"
-      },
       "env": {
         "FLASK_ENV": "development"
       }
+    },
+    {
+      "name": "Run tests (pytest)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "-v"
+      ],
+      "justMyCode": false
+    },
+    {
+      "name": "Debug current test file",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "pytest",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "args": [
+        "-v",
+        "${file}"
+      ],
+      "justMyCode": false
     }
   ]
 }

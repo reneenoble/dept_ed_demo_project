@@ -1,4 +1,10 @@
 {
+    // Auto-select the project's venv when it exists.
+    // Falls back to the user's selected interpreter if .venv isn't there yet.
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+    // Built-in Test Explorer for pytest
+    // (beaker icon in the sidebar — green ▶ next to each test).
     "python.testing.pytestArgs": [
         "."
     ],
